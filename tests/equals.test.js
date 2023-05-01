@@ -44,7 +44,7 @@ describe('test suite: equals.js', () => {
   describe('Function returns true values that arent strictly equal', () => {
     it('Doesnt compare the functions correctly', () => {
       let testFunction = (5, 'six')
-      let expectedResult = undefined
+      let expectedResult = false
 
       let result = strictEquals(testFunction)
 
