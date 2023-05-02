@@ -1,8 +1,9 @@
 let strictEquals = (a, b) => {
-  if (a == b) {
+  let typeA = typeof a
+  let typeB = typeof b
+
+  if (a == b && typeA == typeB) {
     return true
-  } else if (a != b) {
-    return false
   } else {
     return false
   }

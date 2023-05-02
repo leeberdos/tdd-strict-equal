@@ -18,12 +18,13 @@ describe('test suite: equals.js', () => {
     // does function return true if values are strictly equal
     it('Test 1: Tests if function parameters are strictly equal', () => {
       // step 1:describe data/set uo test data
-      let testFunction = (5, 5)
+      let testDataOne = 5
+      let testDataTwo = 5
       let expectedResult = true
 
 
       // step 2:run function with test data
-      let actualResult = strictEquals(testFunction)
+      let actualResult = strictEquals(testDataOne, testDataTwo)
 
       // step 3:assert code running correctly
       expect(actualResult).to.equal(expectedResult)
@@ -31,10 +32,11 @@ describe('test suite: equals.js', () => {
 
     // test 2
     it('Test 2: Tests if a another function is equal', () => {
-      let testFunction = ('5', '5')
+      let testDataOne = '5'
+      let testDataTwo = '5'
       let expectedResult = true
 
-      let actualResult = strictEquals(testFunction)
+      let actualResult = strictEquals(testDataOne, testDataTwo)
 
       expect(actualResult).to.equal(expectedResult)
     })
@@ -43,10 +45,11 @@ describe('test suite: equals.js', () => {
   // negative tests
   describe('Function returns true values that arent strictly equal', () => {
     it('Doesnt compare the functions correctly', () => {
-      let testFunction = (5, 'six')
+      let testDataOne = 5
+      let testDataTwo = '5'
       let expectedResult = false
 
-      let result = strictEquals(testFunction)
+      let result = strictEquals(testDataOne, testDataTwo)
 
       expect(result).to.equal(expectedResult)
     })
